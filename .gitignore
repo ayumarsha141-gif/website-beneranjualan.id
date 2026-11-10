@@ -1,0 +1,11 @@
+.env
+.env.*
+!.env.example
+backups/
+bouquet/assets/uploads/*
+!bouquet/assets/uploads/.gitkeep
+*.log
+.DS_Store
+Thumbs.db
+vendor/
+node_modules/

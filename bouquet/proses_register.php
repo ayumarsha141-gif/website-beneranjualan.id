@@ -1,48 +1,53 @@
 <?php
-require_once 'includes/config.php';
-require_once 'includes/functions.php';
+require_once __DIR__ . '/includes/config.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     redirect('register.php');
 }
+requireCsrf();
 
-if (!validateCsrf($_POST['csrf_token'] ?? '')) {
-    redirect('register.php', 'Token tidak valid!', 'error');
+$nama = clean_text($_POST['nama_lengkap'] ?? '', 120);
+$username = clean_text($_POST['username'] ?? '', 60);
+$email = mb_strtolower(clean_text($_POST['email'] ?? '', 190));
+$password = (string) ($_POST['password'] ?? '');
+$confirm = (string) ($_POST['password_confirm'] ?? '');
+$agree = !empty($_POST['agree']);
+
+$errors = [];
+if (mb_strlen($nama) < 2) {
+    $errors[] = 'Nama lengkap wajib diisi.';
+}
+if (!preg_match('/^[A-Za-z0-9._-]{3,60}$/', $username)) {
+    $errors[] = 'Username tidak valid.';
+}
+if (!valid_email($email)) {
+    $errors[] = 'Format email tidak valid.';
+}
+if (strlen($password) < 8) {
+    $errors[] = 'Password minimal 8 karakter.';
+}
+if ($password !== $confirm) {
+    $errors[] = 'Konfirmasi password tidak cocok.';
+}
+if (!$agree) {
+    $errors[] = 'Setujui kebijakan toko untuk melanjutkan.';
+}
+if ($errors) {
+    flash(implode(' ', $errors), 'error');
+    redirect('register.php');
 }
 
-$nama_lengkap = sanitize($_POST['nama_lengkap']);
-$username = sanitize($_POST['username']);
-$email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-$password = $_POST['password'];
-$password_confirm = $_POST['password_confirm'];
-
-// Validations
-if (empty($nama_lengkap) || empty($username) || empty($email) || empty($password)) {
-    redirect('register.php', 'Semua field wajib diisi!', 'error');
-}
-
-if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    redirect('register.php', 'Format email tidak valid!', 'error');
-}
-
-if (strlen($password) < 6) {
-    redirect('register.php', 'Password minimal 6 karakter!', 'error');
-}
-
-if ($password !== $password_confirm) {
-    redirect('register.php', 'Konfirmasi password tidak cocok!', 'error');
-}
-
-// Check existing user
-$stmt = $pdo->prepare("SELECT id FROM users WHERE username = ? OR email = ?");
+$stmt = $pdo->prepare('SELECT id FROM users WHERE username = ? OR email = ?');
 $stmt->execute([$username, $email]);
 if ($stmt->fetch()) {
-    redirect('register.php', 'Username atau email sudah terdaftar!', 'error');
+    flash('Username atau email sudah terdaftar.', 'error');
+    redirect('register.php');
 }
 
-// Create user
-$hashed_password = hashPassword($password);
-$stmt = $pdo->prepare("INSERT INTO users (nama_lengkap, username, email, password) VALUES (?, ?, ?, ?)");
-$stmt->execute([$nama_lengkap, $username, $email, $hashed_password]);
+$stmt = $pdo->prepare(
+    "INSERT INTO users (nama_lengkap, username, email, password, role, is_active, created_at, updated_at)
+     VALUES (?, ?, ?, ?, 'customer', 1, NOW(), NOW())"
+);
+$stmt->execute([$nama, $username, $email, hashPassword($password)]);
 
-redirect('login.php', 'Registrasi berhasil! Silakan login.', 'success');
+redirect('login.php', 'Akun berhasil dibuat. Silakan masuk.', 'success');

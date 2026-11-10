@@ -1,72 +1,77 @@
 <?php
-$page_title = 'Daftar';
-include 'includes/header.php';
+require_once __DIR__ . '/includes/config.php';
 
 if (isLoggedIn()) {
     redirect('index.php');
 }
+
+$page_title = 'Buat Akun';
+$meta_description = 'Buat akun Beneranjualan.id untuk memantau pesanan.';
+$current_page = 'register';
+include __DIR__ . '/includes/header.php';
 ?>
 
 <section class="auth-page">
-    <div class="auth-container">
+    <div class="container auth-layout auth-layout-reverse">
         <div class="auth-card">
-            <div class="auth-header">
-                <a href="<?= SITE_URL ?>" class="logo">
-                    <i class="fas fa-seedling"></i>
-                    <?= SITE_NAME ?>
-                </a>
-                <h2>Buat Akun Baru</h2>
-                <p>Daftar untuk menikmati berbagai keuntungan</p>
-            </div>
-            
+            <p class="eyebrow">Akun baru</p>
+            <h1 class="auth-title">Buat akun <em>Anda.</em></h1>
             <?php showFlash(); ?>
-            
-            <form action="proses_register.php" method="POST" data-validate>
+
+            <form action="<?= e(site_url('proses_register.php')) ?>" method="post" class="auth-form" autocomplete="on">
                 <?= csrfField() ?>
-                
-                <div class="form-group">
-                    <label>Nama Lengkap <span class="required">*</span></label>
-                    <input type="text" name="nama_lengkap" class="form-control" 
-                           placeholder="Masukkan nama lengkap" required>
+                <div class="field">
+                    <label for="nama_lengkap">Nama lengkap</label>
+                    <input id="nama_lengkap" type="text" name="nama_lengkap" required maxlength="120" autocomplete="name">
                 </div>
-                
-                <div class="form-group">
-                    <label>Username <span class="required">*</span></label>
-                    <input type="text" name="username" class="form-control" 
-                           placeholder="Pilih username" required>
+                <div class="field">
+                    <label for="username">Username</label>
+                    <input id="username" type="text" name="username" required minlength="3" maxlength="60" pattern="[A-Za-z0-9._-]{3,60}" autocomplete="username">
+                    <small>3–60 karakter: huruf, angka, titik, garis bawah, atau strip.</small>
                 </div>
-                
-                <div class="form-group">
-                    <label>Email <span class="required">*</span></label>
-                    <input type="email" name="email" class="form-control" 
-                           placeholder="Masukkan email" required>
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" name="email" required maxlength="190" autocomplete="email">
                 </div>
-                
-                <div class="form-group">
-                    <label>Password <span class="required">*</span></label>
-                    <input type="password" name="password" class="form-control" 
-                           placeholder="Buat password (min 6 karakter)" required>
+                <div class="field">
+                    <label for="password">Password</label>
+                    <input id="password" type="password" name="password" required minlength="8" autocomplete="new-password">
+                    <small>Minimal 8 karakter.</small>
                 </div>
-                
-                <div class="form-group">
-                    <label>Konfirmasi Password <span class="required">*</span></label>
-                    <input type="password" name="password_confirm" class="form-control" 
-                           placeholder="Ulangi password" required>
+                <div class="field">
+                    <label for="password_confirm">Ulangi password</label>
+                    <input id="password_confirm" type="password" name="password_confirm" required minlength="8" autocomplete="new-password">
                 </div>
-                
-                <label style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 20px; cursor: pointer;">
-                    <input type="checkbox" name="agree" required style="margin-top: 4px;">
-                    <span>Saya setuju dengan <a href="#" style="color: var(--primary);">Syarat & Ketentuan</a> serta <a href="#" style="color: var(--primary);">Kebijakan Privasi</a></span>
+                <label class="check-row">
+                    <input type="checkbox" name="agree" value="1" required>
+                    <span>Saya menyetujui <a href="<?= e(site_url('kebijakan.php')) ?>" target="_blank" rel="noopener">kebijakan dan ketentuan toko</a>.</span>
                 </label>
-                
-                <button type="submit" class="btn btn-primary btn-block btn-lg">
-                    <i class="fas fa-user-plus"></i> Daftar Sekarang
-                </button>
+                <button class="btn btn-primary btn-block btn-lg" type="submit">Daftar</button>
             </form>
-            
-            <div class="auth-footer">
-                Sudah punya akun? <a href="login.php">Login</a>
+
+            <p class="auth-footer">Sudah punya akun? <a href="<?= e(site_url('login.php')) ?>">Masuk</a></p>
+        </div>
+
+        <div class="auth-visual" aria-hidden="true">
+            <div class="auth-visual-inner">
+                <p class="eyebrow">Kenapa membuat akun?</p>
+                <h2>Pesanan dan statusnya tersimpan rapi.</h2>
+                <ul class="auth-benefits">
+                    <li>Riwayat pesanan dapat dibuka kembali.</li>
+                    <li>Data penerima terisi otomatis saat checkout.</li>
+                    <li>Status pembayaran dan pengiriman lebih mudah dipantau.</li>
+                </ul>
+                <svg viewBox="0 0 300 240" fill="none" stroke="currentColor" stroke-width="1.1">
+                    <path d="M150 230V110"/>
+                    <path d="M150 160c-42-6-66-28-74-70 37 0 64 26 74 70Z"/>
+                    <path d="M150 190c42-6 66-28 74-70-37 0-64 26-74 70Z"/>
+                    <circle cx="150" cy="82" r="24"/>
+                    <circle cx="114" cy="102" r="18"/>
+                    <circle cx="186" cy="102" r="18"/>
+                </svg>
             </div>
         </div>
     </div>
 </section>
+
+<?php include __DIR__ . '/includes/footer.php'; ?>

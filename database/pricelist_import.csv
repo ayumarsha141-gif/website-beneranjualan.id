@@ -1,0 +1,87 @@
+name,category,source_image,gallery_images,price,pricing_mode,is_active,source_page,pricing_note
+Siera,Petite,catalog-source/[1] Petite Katalog/Siera.heic,,24000,fixed,1,8,Harga referensi pricelist; detail custom dan harga akhir dikonfirmasi via WhatsApp.
+Seroe,Petite,catalog-source/[1] Petite Katalog/Seroe.JPG,,20000,fixed,1,8,Harga referensi pricelist; detail custom dan harga akhir dikonfirmasi via WhatsApp.
+Rosbouq,Petite,catalog-source/[1] Petite Katalog/Rosbouq.jpg,,25000,fixed,1,8,Harga referensi pricelist; detail custom dan harga akhir dikonfirmasi via WhatsApp.
+Rousha,Petite,catalog-source/[1] Petite Katalog/Rousha.jpg,,35000,fixed,1,8,Harga referensi pricelist; detail custom dan harga akhir dikonfirmasi via WhatsApp.
+Dacha,Petite,catalog-source/[1] Petite Katalog/Dacha.JPG,,50000,fixed,1,8,Harga referensi pricelist; detail custom dan harga akhir dikonfirmasi via WhatsApp.
+Lebra,Petite,catalog-source/[1] Petite Katalog/Lebra.heic,,27000,fixed,1,8,Harga referensi pricelist; detail custom dan harga akhir dikonfirmasi via WhatsApp.
+Casha,Petite,catalog-source/[1] Petite Katalog/Casha.heic,,30000,fixed,1,8,Harga referensi pricelist; detail custom dan harga akhir dikonfirmasi via WhatsApp.
+Edsha,Petite,catalog-source/[1] Petite Katalog/Edsha.JPG,,65000,fixed,1,8,Harga referensi pricelist; detail custom dan harga akhir dikonfirmasi via WhatsApp.
+Sinra,Petite,catalog-source/[1] Petite Katalog/Sinra.heic,,22000,fixed,1,9,Harga referensi pricelist; detail custom dan harga akhir dikonfirmasi via WhatsApp.
+Mira,Petite,catalog-source/[1] Petite Katalog/Mira.heic,,12000,fixed,1,9,Harga referensi pricelist; detail custom dan harga akhir dikonfirmasi via WhatsApp.
+Clawsha,Petite,catalog-source/[1] Petite Katalog/Clawsha.jpg,,25000,fixed,1,9,Termasuk clawclip sesuai pricelist; detail custom via WhatsApp.
+Sunsha,Petite,catalog-source/[1] Petite Katalog/Sunsha.jpg,,35000,fixed,1,9,Harga referensi pricelist; detail custom dan harga akhir dikonfirmasi via WhatsApp.
+Mitsha,Petite,catalog-source/[1] Petite Katalog/Mitsha.jpg,,35000,fixed,1,9,Harga referensi pricelist; detail custom dan harga akhir dikonfirmasi via WhatsApp.
+Dnsha,Signature,catalog-source/[2] Signature Katalog/Dnsha.PNG,,90000,fixed,1,10,Harga referensi pricelist; detail custom dan harga akhir dikonfirmasi via WhatsApp.
+Pirousha,Signature,catalog-source/[2] Signature Katalog/Pirousha.jpg,,60000,fixed,1,10,Harga referensi pricelist; detail custom dan harga akhir dikonfirmasi via WhatsApp.
+Claxflo,Signature,catalog-source/[2] Signature Katalog/Claxflo.jpg,,50000,fixed,1,10,Termasuk clawclip sesuai pricelist; detail custom via WhatsApp.
+Lisha,Signature,catalog-source/[2] Signature Katalog/Lisha.jpg,,70000,fixed,1,10,Harga referensi pricelist; detail custom dan harga akhir dikonfirmasi via WhatsApp.
+Viesha,Signature,catalog-source/[2] Signature Katalog/Viesha1.heic,catalog-source/[2] Signature Katalog/Viesha2.heic,85000,fixed,1,10,Termasuk mini LED tumbler sesuai pricelist; detail custom via WhatsApp.
+Flyshia,Signature,catalog-source/[2] Signature Katalog/Flyshia1.jpg,catalog-source/[2] Signature Katalog/Flyshia2.jpg,60000,fixed,1,10,Termasuk mini LED tumbler sesuai pricelist; ukuran sekitar 45 x 40 cm.
+Sisha,Signature,catalog-source/[2] Signature Katalog/Sisha.jpg,,95000,fixed,1,10,Harga referensi pricelist; detail custom dan harga akhir dikonfirmasi via WhatsApp.
+Crsha,Signature,catalog-source/[2] Signature Katalog/Crsha.jpg,,95000,fixed,1,10,Harga referensi pricelist; detail custom dan harga akhir dikonfirmasi via WhatsApp.
+Liera,Signature,catalog-source/[2] Signature Katalog/Liera.JPG,,90000,fixed,1,10,Harga referensi pricelist; detail custom dan harga akhir dikonfirmasi via WhatsApp.
+Sunny,Signature,catalog-source/[2] Signature Katalog/Sunny.heic,,65000,fixed,1,11,Harga referensi pricelist; detail custom dan harga akhir dikonfirmasi via WhatsApp.
+Flincha,Signature,catalog-source/[2] Signature Katalog/Flincha.heic,,55000,fixed,1,11,Harga referensi pricelist; detail custom dan harga akhir dikonfirmasi via WhatsApp.
+Rowsha,Signature,catalog-source/[2] Signature Katalog/Rowsha.jpg,,60000,fixed,1,11,Harga referensi pricelist; detail custom dan harga akhir dikonfirmasi via WhatsApp.
+Crona,Signature,catalog-source/[2] Signature Katalog/Crona.jpg,,40000,fixed,1,11,Harga referensi pricelist; detail custom dan harga akhir dikonfirmasi via WhatsApp.
+Nasha,Signature,catalog-source/[2] Signature Katalog/Nasha.jpg,,50000,fixed,1,11,Harga referensi pricelist; detail custom dan harga akhir dikonfirmasi via WhatsApp.
+Suflosha,Grand,catalog-source/[3] Grand Katalog/Suflosha.jpg,,110000,fixed,1,12,Harga referensi pricelist; detail custom dan harga akhir dikonfirmasi via WhatsApp.
+Brysha,Grand,catalog-source/[3] Grand Katalog/Brysha.jpg,,100000,from,1,12,Harga mulai dari sesuai pricelist; isi custom dan harga akhir via WhatsApp.
+Bluesha,Grand,catalog-source/[3] Grand Katalog/Bluesha1.heic,catalog-source/[3] Grand Katalog/Bluesha2.heic,140000,fixed,1,12,Harga referensi pricelist; detail custom dan harga akhir dikonfirmasi via WhatsApp.
+Bookuet,Grand,catalog-source/[3] Grand Katalog/Bookuet.heic,,100000,from,1,12,Harga mulai dari sesuai pricelist; isi custom dan harga akhir via WhatsApp.
+Jisha,Grand,catalog-source/[3] Grand Katalog/Jisha.jpg,,140000,fixed,1,12,Harga referensi pricelist; detail custom dan harga akhir dikonfirmasi via WhatsApp.
+Talisha,Grand,catalog-source/[3] Grand Katalog/Talisha.jpg,,250000,fixed,1,12,Termasuk mini LED tumbler sesuai pricelist; custom via WhatsApp.
+Belisha,Grand,catalog-source/[3] Grand Katalog/Belisha.jpg,,300000,fixed,1,12,Harga referensi pricelist; detail custom dan harga akhir dikonfirmasi via WhatsApp.
+Trovie,Sash & Trophy,catalog-source/[5] Sash Flower & Trophy Katalog/Trovie.jpg,,140000,fixed,1,13,Pre-order H-14; custom tulisan trophy dan tanggal dikonfirmasi via WhatsApp.
+Sasha,Sash & Trophy,catalog-source/[5] Sash Flower & Trophy Katalog/Sasha.jpg,,150000,fixed,1,13,Harga referensi pricelist; custom tulisan dikonfirmasi via WhatsApp.
+Salicha,Sash & Trophy,catalog-source/[5] Sash Flower & Trophy Katalog/Salicha.jpg,,170000,fixed,1,13,Free custom tulisan akrilik sesuai pricelist; detail via WhatsApp.
+Pipo,Basket,catalog-source/[4] Basket Katalog/Pipo.JPG,,40000,fixed,1,14,Harga referensi pricelist; detail custom dan harga akhir dikonfirmasi via WhatsApp.
+Baysha,Basket,catalog-source/[4] Basket Katalog/Baysha1.jpg,catalog-source/[4] Basket Katalog/Baysha2.HEIC,65000,fixed,1,14,Harga referensi pricelist; detail isi dan ukuran dikonfirmasi via WhatsApp.
+Barna,Basket,,,250000,fixed,0,14,Harga tercatat di pricelist; foto produk belum terpetakan; unggah/verifikasi sebelum diaktifkan.
+Bayca,Basket,,,80000,fixed,0,14,Harga tercatat di pricelist; foto produk belum terpetakan; unggah/verifikasi sebelum diaktifkan.
+Raisha,Chocolate & Snack,catalog-source/[6] Chocolate & Snack Katalog/Raisha.jpg,,140000,from,1,15,Harga mulai dari sesuai pricelist; isi snack custom dikonfirmasi via WhatsApp.
+Daybho,Chocolate & Snack,catalog-source/[6] Chocolate & Snack Katalog/Daybho.heic,,45000,from,1,15,Harga mulai dari sesuai pricelist; isi snack custom dikonfirmasi via WhatsApp.
+Linsha,Chocolate & Snack,catalog-source/[6] Chocolate & Snack Katalog/Linsha.heic,,120000,from,1,15,Harga mulai dari sesuai pricelist; isi snack custom dikonfirmasi via WhatsApp.
+Spysha,Chocolate & Snack,catalog-source/[6] Chocolate & Snack Katalog/Spysha.jpg,,140000,from,1,15,Harga mulai dari sesuai pricelist; isi snack custom dikonfirmasi via WhatsApp.
+Snabo,Chocolate & Snack,catalog-source/[6] Chocolate & Snack Katalog/Snabo.heic,,75000,from,1,15,Harga mulai dari sesuai pricelist; isi snack custom dikonfirmasi via WhatsApp.
+Darbo,Chocolate & Snack,catalog-source/[6] Chocolate & Snack Katalog/Darbo.heic,,40000,from,1,15,Harga mulai dari sesuai pricelist; isi snack custom dikonfirmasi via WhatsApp.
+Dynsha,Chocolate & Snack,catalog-source/[6] Chocolate & Snack Katalog/Dynsha.heic,,7000,fixed,1,16,Termasuk permen Milkita stik sesuai pricelist; ketersediaan via WhatsApp.
+Vana,Chocolate & Snack,catalog-source/[6] Chocolate & Snack Katalog/Vana.JPG,,0,quote,0,15-16,PDF menandai limited-time offer tanpa tanggal berlaku yang masih dapat diverifikasi; konfirmasi harga terbaru.
+Valana,Chocolate & Snack,catalog-source/[6] Chocolate & Snack Katalog/Valana.jpg,,0,quote,0,15-16,PDF menandai limited-time offer tanpa tanggal berlaku yang masih dapat diverifikasi; konfirmasi harga terbaru.
+Valencia,Chocolate & Snack,catalog-source/[6] Chocolate & Snack Katalog/Valencia.jpg,,0,quote,0,15-16,PDF menandai limited-time offer tanpa tanggal berlaku yang masih dapat diverifikasi; konfirmasi harga terbaru.
+Lipcho,Petite,,,0,quote,0,8,Promo lama dan foto sumber tidak ditemukan; perlu harga/foto yang berlaku sebelum aktivasi.
+Phosha,Photo Bouquet,catalog-source/[7] Photo Katalog/Phosha.heic,,50000,from,1,17,Harga mulai dari sesuai pricelist; pilihan foto/custom dikonfirmasi via WhatsApp.
+Phodi,Photo Bouquet,catalog-source/[7] Photo Katalog/Phodi.jpg,,75000,from,1,17,Harga mulai dari sesuai pricelist; free request foto sesuai pricelist.
+Phipo,Photo Bouquet,catalog-source/[7] Photo Katalog/Phipo.jpg,,5000,from,1,17,Harga mulai dari sesuai pricelist; format foto dikonfirmasi via WhatsApp.
+Orsha,Souvenir,catalog-source/[8] Souvenir Katalog/Orsha.heic,,70000,fixed,1,18,Harga referensi pricelist; detail custom dan harga akhir dikonfirmasi via WhatsApp.
+Jesha Lumea,Souvenir,catalog-source/[8] Souvenir Katalog/Jesha Lumea.JPG,,80000,fixed,1,18,Termasuk mini LED tumbler sesuai pricelist.
+Handbouq,Souvenir,catalog-source/[8] Souvenir Katalog/Handbouq.jpg,,250000,fixed,1,18,Termasuk mini fan dan mini mirror sesuai pricelist.
+Siera,Souvenir,catalog-source/[8] Souvenir Katalog/Siera.heic,,15000,fixed,1,18,Harga referensi pricelist; jumlah dan ketersediaan via WhatsApp.
+Ceera,Souvenir,catalog-source/[8] Souvenir Katalog/Ceera1.heic,catalog-source/[8] Souvenir Katalog/Ceera2.heic,30000,fixed,1,18,Harga referensi pricelist; detail custom dan harga akhir dikonfirmasi via WhatsApp.
+Ceesha,Souvenir,catalog-source/[8] Souvenir Katalog/Ceesha1.heic,catalog-source/[8] Souvenir Katalog/Ceesha2.heic,45000,fixed,1,18,Harga referensi pricelist; detail custom dan harga akhir dikonfirmasi via WhatsApp.
+Rysha,Souvenir,catalog-source/[8] Souvenir Katalog/Rysha.heic,,120000,from,1,18,Harga mulai dari sesuai pricelist; termasuk bricks menurut PDF.
+Antrosha,Souvenir,catalog-source/[8] Souvenir Katalog/Antrosha1.heic,catalog-source/[8] Souvenir Katalog/Antrosha2.heic,150000,fixed,1,18,Termasuk mini LED tumbler sesuai pricelist.
+Phora,Souvenir,catalog-source/[8] Souvenir Katalog/Phora.jpg,,55000,fixed,1,18,Harga per pcs sesuai pricelist; custom tulisan/foto dan paper bag via WhatsApp.
+Candya,Souvenir,catalog-source/[8] Souvenir Katalog/Candya.jpg,,50000,fixed,1,19,Harga referensi pricelist; detail custom via WhatsApp.
+Monic,Money Bouquet,catalog-source/[10] Money Bouquet Katalog/Monic.jpg,,15000,fixed,1,19,Harga referensi pricelist; denominasi uang dan harga akhir dikonfirmasi via WhatsApp.
+Flowkie,Keychain,catalog-source/[9] Keychain Katalog/Flowkie.heic,,5000,fixed,1,20,Harga per pcs sesuai pricelist; nama/warna custom via WhatsApp.
+Keipie,Keychain,catalog-source/[9] Keychain Katalog/Keipie.jpg,,20000,fixed,1,20,Harga per pcs sesuai pricelist; custom via WhatsApp.
+Narisha,Keychain,catalog-source/[9] Keychain Katalog/Narisha.heic,,10000,fixed,1,20,Harga 10.000 per pcs atau 15.000 per 2 pcs sesuai pricelist.
+Kiesha,Keychain,catalog-source/[9] Keychain Katalog/Kiesha.heic,,10000,fixed,1,20,Harga 10.000 per pcs atau 17.000 per 2 pcs sesuai pricelist.
+Misha,Keychain,catalog-source/[9] Keychain Katalog/Misha1.PNG,catalog-source/[9] Keychain Katalog/Misha2.jpg,25000,fixed,1,20,Harga referensi pricelist; variasi nama/karakter via WhatsApp.
+Rochie,Keychain,catalog-source/[9] Keychain Katalog/Rochie.heic,,8000,fixed,1,20,Harga 8.000 per pcs atau 12.000 per 2 pcs sesuai pricelist.
+Vini,Valentine's Day,catalog-source/[11] Valentine_s Day Katalog/Vini.jpg,,0,quote,0,21-22,Harga promo Valentine pada PDF bertanggal sampai Februari 2026; cek pricelist baru sebelum aktif.
+Vali,Valentine's Day,catalog-source/[11] Valentine_s Day Katalog/Vali.jpg,,0,quote,0,21-22,Harga promo Valentine pada PDF sudah lewat; cek harga baru sebelum aktif.
+Vaca,Valentine's Day,catalog-source/[11] Valentine_s Day Katalog/Vaca.jpg,,0,quote,0,21-22,Harga promo Valentine pada PDF sudah lewat; cek harga baru sebelum aktif.
+Vapiy,Valentine's Day,catalog-source/[11] Valentine_s Day Katalog/Vapiy.jpg,,0,quote,0,21-22,Harga promo Valentine pada PDF sudah lewat; cek harga baru sebelum aktif.
+Vasha,Valentine's Day,catalog-source/[11] Valentine_s Day Katalog/Vasha.jpg,,0,quote,0,21-22,Harga promo Valentine pada PDF sudah lewat; cek harga baru sebelum aktif.
+Vale,Valentine's Day,catalog-source/[11] Valentine_s Day Katalog/Vale.jpg,,0,quote,0,21-22,Harga promo Valentine pada PDF sudah lewat; cek harga baru sebelum aktif.
+Teary 1,Teacher's Day,catalog-source/[12] Teacher_s Day Katalog/Teary1.heic,,45000,fixed,1,23,Harga referensi pricelist; ketersediaan/custom via WhatsApp.
+Teary 2,Teacher's Day,catalog-source/[12] Teacher_s Day Katalog/Teary2.heic,,5000,fixed,1,23,Harga per pcs sesuai pricelist.
+Teary 3,Teacher's Day,catalog-source/[12] Teacher_s Day Katalog/Teary3.heic,,15000,fixed,1,23,Termasuk pen sesuai pricelist.
+Mowra 1,Mother's Day,catalog-source/[13] Mother_s Day Katalog/Mowra1.heic,,0,quote,0,24,Promo terbatas pada PDF; cek harga baru sebelum aktif.
+Mowra 2,Mother's Day,catalog-source/[13] Mother_s Day Katalog/Mowra2.heic,,0,quote,0,24,Promo terbatas pada PDF; cek harga baru sebelum aktif.
+Hampers Hari Raya Custom,Hampers Hari Raya,catalog-source/[14] Hampers Katalog/Silent1.jpg,catalog-source/[14] Hampers Katalog/Silent2.jpg|catalog-source/[14] Hampers Katalog/Silent3.jpg|catalog-source/[14] Hampers Katalog/Silent4.jpg|catalog-source/[14] Hampers Katalog/Silent5.jpg|catalog-source/[14] Hampers Katalog/Silent6.jpg|catalog-source/[14] Hampers Katalog/Silent7.jpg|catalog-source/[14] Hampers Katalog/Silent8.jpg|catalog-source/[14] Hampers Katalog/Silent9.jpg|catalog-source/[14] Hampers Katalog/Silent10.jpg|catalog-source/[14] Hampers Katalog/Silent11.JPG|catalog-source/[14] Hampers Katalog/Silent12.jpg|catalog-source/[14] Hampers Katalog/Silent13.jpg|catalog-source/[14] Hampers Katalog/Silent15.jpg|catalog-source/[14] Hampers Katalog/Christmas14.PNG,30000,from,1,25-26,Harga mulai dari; isi tema dan harga akhir disepakati via WhatsApp.
+Paper Bag (Add-on),Add-ons,catalog-source/price-list/extracted-addons/paper-bag.png,,5000,fixed,1,27,Add-on paper bag sesuai pricelist; pilih melalui WhatsApp.
+Lampu Tumbler Mini (Add-on),Add-ons,catalog-source/price-list/extracted-addons/mini-led-tumbler.png,,5000,fixed,1,27,Add-on lampu mini sekitar 1 m; warna yang tersedia dikonfirmasi via WhatsApp.

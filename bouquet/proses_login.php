@@ -1,41 +1,60 @@
 <?php
-require_once 'includes/config.php';
-require_once 'includes/functions.php';
+require_once __DIR__ . '/includes/config.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     redirect('login.php');
 }
+requireCsrf();
 
-if (!validateCsrf($_POST['csrf_token'] ?? '')) {
-    redirect('login.php', 'Token tidak valid!', 'error');
+$username = clean_text($_POST['username'] ?? '', 190);
+$password = (string) ($_POST['password'] ?? '');
+$ip = $_SERVER['REMOTE_ADDR'] ?? '0.0.0.0';
+
+if ($username === '' || $password === '') {
+    redirect('login.php', 'Email/username dan password wajib diisi.', 'error');
 }
 
-$username = sanitize($_POST['username']);
-$password = $_POST['password'];
-
-if (empty($username) || empty($password)) {
-    redirect('login.php', 'Username dan password wajib diisi!', 'error');
+// Rate limit: max 8 failed attempts per IP in 15 minutes.
+$stmt = $pdo->prepare(
+    'SELECT COUNT(*) FROM login_attempts
+     WHERE ip_address = ? AND success = 0 AND attempted_at > (NOW() - INTERVAL 15 MINUTE)'
+);
+$stmt->execute([$ip]);
+if ((int) $stmt->fetchColumn() >= 8) {
+    redirect('login.php', 'Terlalu banyak percobaan masuk. Coba lagi dalam 15 menit.', 'error');
 }
 
-// Check user by username or email
-$stmt = $pdo->prepare("SELECT * FROM users WHERE username = ? OR email = ?");
+$stmt = $pdo->prepare('SELECT * FROM users WHERE (username = ? OR email = ?) AND is_active = 1 LIMIT 1');
 $stmt->execute([$username, $username]);
 $user = $stmt->fetch();
 
-if (!$user || !verifyPassword($password, $user['password'])) {
-    redirect('login.php', 'Username atau password salah!', 'error');
+$valid = $user && verifyPassword($password, (string) $user['password']);
+
+if (!$valid) {
+    $log = $pdo->prepare('INSERT INTO login_attempts (ip_address, username, success, attempted_at) VALUES (?, ?, 0, NOW())');
+    $log->execute([$ip, mb_substr($username, 0, 190)]);
+    redirect('login.php', 'Email/username atau password salah.', 'error');
 }
 
-// Set session
-$_SESSION['user_id'] = $user['id'];
-$_SESSION['username'] = $user['username'];
-$_SESSION['email'] = $user['email'];
-$_SESSION['nama_lengkap'] = $user['nama_lengkap'];
-$_SESSION['role'] = $user['role'];
+// Upgrade legacy hashes if needed.
+if (password_needs_rehash($user['password'], PASSWORD_DEFAULT)) {
+    $upd = $pdo->prepare('UPDATE users SET password = ? WHERE id = ?');
+    $upd->execute([hashPassword($password), $user['id']]);
+}
 
-// Redirect based on role
+login_user($user);
+
+$pdo->prepare('DELETE FROM login_attempts WHERE ip_address = ? AND success = 0')->execute([$ip]);
+$pdo->prepare('INSERT INTO login_attempts (ip_address, username, success, attempted_at) VALUES (?, ?, 1, NOW())')
+    ->execute([$ip, mb_substr($user['username'], 0, 190)]);
+
+$intended = $_SESSION['intended'] ?? '';
+unset($_SESSION['intended']);
+if (is_string($intended) && str_starts_with($intended, '/') && !str_starts_with($intended, '//')) {
+    redirect(ltrim($intended, '/'), 'Selamat datang kembali, ' . $user['nama_lengkap'] . '.', 'success');
+}
+
 if ($user['role'] === 'admin') {
-    redirect('admin/dashboard.php', 'Selamat datang, ' . $user['nama_lengkap'] . '!', 'success');
-} else {
-    redirect('index.php', 'Login berhasil!', 'success');
+    redirect('admin/dashboard.php', 'Selamat datang, ' . $user['nama_lengkap'] . '.', 'success');
 }
+redirect('index.php', 'Selamat datang kembali, ' . $user['nama_lengkap'] . '.', 'success');

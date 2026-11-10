@@ -1,6 +1,16 @@
 <?php
-require_once 'includes/config.php';
-require_once 'includes/functions.php';
+require_once __DIR__ . '/includes/config.php';
 
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    redirect('index.php', 'Gunakan tombol keluar di menu akun.', 'info');
+}
+requireCsrf();
+
+$_SESSION = [];
+if (ini_get('session.use_cookies')) {
+    $params = session_get_cookie_params();
+    setcookie(session_name(), '', time() - 42000, $params['path'], $params['domain'] ?? '', (bool) $params['secure'], (bool) $params['httponly']);
+}
 session_destroy();
-redirect('login.php', 'Anda telah logout.', 'success');
+
+redirect('login.php', 'Anda telah keluar.', 'success');
